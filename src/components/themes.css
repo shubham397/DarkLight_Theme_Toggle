@@ -1,0 +1,57 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111827;
+  --slider-bg: #e5e7eb;
+  --slider-thumb: #ffffff;
+}
+
+[data-theme="dark"] {
+  --bg-color: #111827;
+  --text-color: #f3f4f6;
+  --slider-bg: #374151;
+  --slider-thumb: #1f2937;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: sans-serif;
+  margin: 0;
+  padding: 2rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Slider Toggle Container */
+.slider-container {
+  width: 60px;
+  height: 32px;
+  background-color: var(--slider-bg);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Slider Button */
+.slider {
+  width: 24px;
+  height: 24px;
+  background-color: var(--slider-thumb);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+/* Move the thumb to the right if dark mode */
+.slider.dark {
+  transform: translateX(28px);
+}
+
+/* Emoji icon inside the slider */
+.icon {
+  font-size: 14px;
+}
